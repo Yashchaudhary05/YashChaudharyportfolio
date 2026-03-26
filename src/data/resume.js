@@ -87,20 +87,84 @@ export const experience = [
 
 export const projects = [
   {
-    title: 'End-to-End CI/CD Pipeline',
+    title: 'AI-Powered Observability Dashboard',
+    period: 'Apr 2025 — Present',
     description:
-      'Fully automated CI/CD pipeline using GitHub Actions, Docker, and Ansible with zero manual intervention. Multi-stage Docker images with optimized layering and secure configurations. Infrastructure as Code for reproducible deployments.',
-    tech: ['GitHub Actions', 'Docker', 'Ansible', 'IaC'],
-    github: '#', // TODO: add actual link
+      'Built an AI-driven observability platform with anomaly detection and root cause analysis using LLM-based pipelines, improving system usability and interaction efficiency by 80%.',
+    features: [
+      'GPT-4.1 powered KPI anomaly detection system',
+      'Natural language interface for querying system metrics',
+      'Automated root cause analysis with parametric prompting',
+      'Guard-railed AI workflows with SQL-safe query generation',
+    ],
+    tech: ['Python', 'GPT-4.1', 'MongoDB', 'Prompt Engineering', 'AIOps'],
+    github: null,
     live: null,
+    confidential: true,
   },
   {
-    title: 'AI-Powered Observability Dashboard',
+    title: 'DevOps CI/CD Pipeline — End-to-End',
+    period: 'Mar 2026 — Present',
     description:
-      'AI-driven observability platform with anomaly detection and root cause analysis using LLM-based pipelines. Natural language interface for querying system metrics. Modular architecture integrating telemetry ingestion, prompt pipelines, and structured response generation.',
-    tech: ['Python', 'GPT-4.1', 'MongoDB', 'React'],
-    github: '#', // TODO: add actual link
+      'Production-grade CI/CD pipeline automating the entire software delivery lifecycle — from code commit to containerized deployment using Docker, GitHub Actions, and Ansible with zero manual intervention.',
+    features: [
+      'Fully automated pipeline: Test → Build → Push → Deploy',
+      'Multi-stage Docker builds with Alpine (46.8MB image)',
+      'Ansible-driven deployment with health check verification',
+      'GitHub Actions with caching, secrets, and artifact management',
+    ],
+    tech: ['Docker', 'GitHub Actions', 'Ansible', 'Node.js', 'IaC'],
+    github: 'https://github.com/Yashchaudhary05/Automated_Portfolio',
     live: null,
+    confidential: false,
+  },
+  {
+    title: 'AWS CSA C03 Practice Quiz',
+    period: 'Sep 2024 — Nov 2024',
+    description:
+      'Comprehensive web-based platform for AWS CSA C03 certification exam preparation with 500+ questions, real-time result tracking and performance analytics. Deployed on AWS EC2.',
+    features: [
+      'Interactive quiz interface with 500+ questions',
+      'Real-time result tracking and analytics',
+      'Deployed on AWS EC2 with Apache HTTP server',
+      'High availability and scalable architecture',
+    ],
+    tech: ['AWS EC2', 'Apache', 'JavaScript', 'HTML/CSS'],
+    github: null,
+    live: 'https://yashchaudhary05.github.io/aws_csa_c03-practice-quiz-website/',
+    confidential: false,
+  },
+  {
+    title: 'T2DM Diabetes Detection System',
+    period: 'Sep 2023 — Jul 2024',
+    description:
+      'AI-powered Type 2 Diabetes detection system using machine learning algorithms to predict diabetes risk with exceptional 99% accuracy, trained on comprehensive healthcare datasets.',
+    features: [
+      'Machine learning model with 99% accuracy',
+      'Trained on comprehensive healthcare datasets',
+      'User-friendly prediction interface',
+      'Real-time risk assessment and recommendations',
+    ],
+    tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy'],
+    github: 'https://github.com/Yashchaudhary05/pima',
+    live: null,
+    confidential: false,
+  },
+  {
+    title: 'Social Media Dashboard',
+    period: 'Feb 2024 — Apr 2024',
+    description:
+      'Modern social media dashboard with dark mode toggle and responsive design, deployed on AWS EC2 with load balancers. Achieved a 20% increase in user engagement.',
+    features: [
+      'Dark mode toggle with smooth transitions',
+      'Responsive CSS grid layouts',
+      'AWS EC2 deployment with load balancers',
+      '20% increase in user engagement',
+    ],
+    tech: ['React.js', 'CSS Grid', 'AWS EC2', 'Load Balancer'],
+    github: null,
+    live: null,
+    confidential: false,
   },
 ]
 
