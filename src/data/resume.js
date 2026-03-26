@@ -119,15 +119,15 @@ export const projects = [
     confidential: false,
   },
   {
-    title: 'AWS CSA C03 Practice Quiz',
-    period: 'Sep 2024 — Nov 2024',
+    title: 'Certification Exam Prep — Mock Quiz System',
+    period: 'Sep 2024 — Present',
     description:
-      'Comprehensive web-based platform for AWS CSA C03 certification exam preparation with 500+ questions, real-time result tracking and performance analytics. Deployed on AWS EC2.',
+      'Multi-certification mock exam platform supporting AWS CSA C03, CCNA, and Salesforce AI Specialist with 300+ questions, real-time scoring, and performance analytics.',
     features: [
+      'Supports AWS CSA, CCNA & Salesforce AI Specialist exams',
       'Interactive quiz interface with 500+ questions',
-      'Real-time result tracking and analytics',
-      'Deployed on AWS EC2 with Apache HTTP server',
-      'High availability and scalable architecture',
+      'Real-time result tracking and performance analytics',
+      'Deployable on AWS EC2 with high availability',
     ],
     tech: ['AWS EC2', 'Apache', 'JavaScript', 'HTML/CSS'],
     github: null,

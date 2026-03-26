@@ -83,20 +83,19 @@ export default function useScrollAnimations(enabled) {
         )
       }
 
-      // Project cards stagger
-      const projectCards = document.querySelectorAll('.project-card')
-      if (projectCards.length) {
+      // Project carousel entrance
+      const carousel = document.querySelector('.projects-carousel')
+      if (carousel) {
         gsap.fromTo(
-          projectCards,
+          carousel,
           { opacity: 0, y: 40 },
           {
             opacity: 1,
             y: 0,
-            duration: 0.6,
-            stagger: 0.15,
+            duration: 0.7,
             ease: 'power3.out',
             scrollTrigger: {
-              trigger: projectCards[0],
+              trigger: carousel,
               start: 'top 85%',
             },
           },
