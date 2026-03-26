@@ -1,10 +1,17 @@
 import { personalInfo } from '../data/resume'
+import ParticleNetwork from './ParticleNetwork'
+import useTypingEffect from '../hooks/useTypingEffect'
 import './styles/Hero.css'
+import './styles/Effects.css'
+
+const phrases = ['the cloud', 'infrastructure', 'CI/CD pipelines', 'observability']
 
 export default function Hero() {
+  const typedText = useTypingEffect(phrases, 80, 2200)
+
   return (
     <section className="hero" id="hero">
-      <div className="hero-bg-grid" aria-hidden="true" />
+      <ParticleNetwork />
       <div className="hero-orb" aria-hidden="true" />
 
       <p className="hero-greeting animate-in">Hi, my name is</p>
@@ -12,7 +19,8 @@ export default function Hero() {
       <h1 className="hero-name animate-in">{personalInfo.name}.</h1>
 
       <h2 className="hero-tagline animate-in">
-        I build things for the <span className="accent-word">cloud</span>.
+        I build things for <span className="accent-word">{typedText}</span>
+        <span className="typing-cursor" aria-hidden="true" />
       </h2>
 
       <p className="hero-description animate-in">

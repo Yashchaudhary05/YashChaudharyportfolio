@@ -1,11 +1,22 @@
 import { aboutText, education } from '../data/resume'
+import useCountUp from '../hooks/useCountUp'
 import './styles/About.css'
 
+function CountCard({ end, suffix = '', label }) {
+  const [ref, value] = useCountUp(end, 2000)
+  return (
+    <div ref={ref} className="highlight-card animate-in">
+      <div className="number">{value}{suffix}</div>
+      <div className="label">{label}</div>
+    </div>
+  )
+}
+
 const highlights = [
-  { number: '1+', label: 'Year at Cisco' },
-  { number: '1000+', label: 'Regression Tests' },
-  { number: '80%', label: 'Engagement Increase' },
-  { number: '3', label: 'Certifications' },
+  { end: 1, suffix: '+', label: 'Year at Cisco' },
+  { end: 1000, suffix: '+', label: 'Regression Tests' },
+  { end: 80, suffix: '%', label: 'Engagement Increase' },
+  { end: 3, suffix: '', label: 'Certifications' },
 ]
 
 export default function About() {
@@ -23,10 +34,7 @@ export default function About() {
 
         <div className="about-highlights">
           {highlights.map((h, i) => (
-            <div key={i} className="highlight-card animate-in">
-              <div className="number">{h.number}</div>
-              <div className="label">{h.label}</div>
-            </div>
+            <CountCard key={i} end={h.end} suffix={h.suffix} label={h.label} />
           ))}
 
           <div className="about-education animate-in">

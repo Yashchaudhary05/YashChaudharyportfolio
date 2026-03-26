@@ -3,6 +3,7 @@ import Loading from './components/Loading'
 import Navbar from './components/Navbar'
 import Cursor from './components/Cursor'
 import SocialSidebar from './components/SocialSidebar'
+import ScrollProgress from './components/ScrollProgress'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
@@ -25,6 +26,7 @@ export default function App() {
 
       <div className="app" style={{ visibility: loading ? 'hidden' : 'visible' }}>
         <a href="#about" className="skip-link">Skip to main content</a>
+        <ScrollProgress />
         <Cursor />
         <Navbar />
         <SocialSidebar />
