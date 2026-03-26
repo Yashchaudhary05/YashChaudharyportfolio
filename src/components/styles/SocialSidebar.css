@@ -1,0 +1,71 @@
+.social-sidebar {
+  position: fixed;
+  bottom: 0;
+  left: clamp(16px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  z-index: 50;
+}
+
+.social-sidebar::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 90px;
+  background: var(--text-secondary);
+}
+
+.social-sidebar a {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  transition: all 0.3s var(--ease-out);
+  display: flex;
+}
+
+.social-sidebar a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* Email sidebar on the right */
+.email-sidebar {
+  position: fixed;
+  bottom: 0;
+  right: clamp(16px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  z-index: 50;
+}
+
+.email-sidebar::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 90px;
+  background: var(--text-secondary);
+}
+
+.email-sidebar a {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+  writing-mode: vertical-rl;
+  transition: all 0.3s var(--ease-out);
+}
+
+.email-sidebar a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .social-sidebar,
+  .email-sidebar {
+    display: none;
+  }
+}

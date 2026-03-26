@@ -1,0 +1,94 @@
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s var(--ease-out), visibility 0.6s;
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.loader-logo {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  position: relative;
+}
+
+.loader-logo::after {
+  content: '_';
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Terminal-style progress */
+.loader-terminal {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: left;
+  width: 280px;
+}
+
+.loader-terminal .line {
+  opacity: 0;
+  transform: translateY(8px);
+  margin-bottom: 4px;
+}
+
+.loader-terminal .line.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s var(--ease-out);
+}
+
+.loader-terminal .prompt {
+  color: var(--accent);
+}
+
+.loader-terminal .success {
+  color: #4ade80;
+}
+
+/* Progress bar */
+.loader-bar-container {
+  width: 280px;
+  height: 2px;
+  background: var(--bg-card);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.loader-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 1px;
+  transition: width 0.3s var(--ease-out);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.loader-percent {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}

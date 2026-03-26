@@ -1,0 +1,201 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--container-width);
+  margin: 0 auto;
+  padding-top: 72px;
+  position: relative;
+}
+
+.hero-greeting {
+  font-family: var(--font-mono);
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 800;
+  color: var(--text-bright);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.hero-tagline {
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text-secondary);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.hero-tagline .accent-word {
+  color: var(--accent);
+  position: relative;
+}
+
+.hero-description {
+  max-width: 540px;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-cta {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  padding: 14px 28px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  color: var(--accent);
+  background: transparent;
+  transition: all 0.3s var(--ease-out);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-cta:hover {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.hero-cta.primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-cta.primary:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* Decorative grid bg */
+.hero-bg-grid {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 50%;
+  height: 100%;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(var(--accent) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+}
+
+/* Floating glow orb */
+.hero-orb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+  right: 5%;
+  top: 25%;
+  opacity: 0.4;
+  filter: blur(80px);
+  animation: float-orb 8s ease-in-out infinite alternate;
+}
+
+@keyframes float-orb {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-30px, 30px); }
+}
+
+/* Terminal card */
+.hero-terminal {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(420px, 35vw);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.hero-terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.hero-terminal-dot:nth-child(1) { background: #ff5f57; }
+.hero-terminal-dot:nth-child(2) { background: #febc2e; }
+.hero-terminal-dot:nth-child(3) { background: #28c840; }
+
+.hero-terminal-bar span {
+  margin-left: auto;
+  color: var(--text-secondary);
+  font-size: 0.65rem;
+}
+
+.hero-terminal-body {
+  padding: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.hero-terminal-body .cmd {
+  color: var(--accent);
+}
+
+.hero-terminal-body .output {
+  color: var(--text-primary);
+}
+
+.hero-terminal-body .comment {
+  color: #4a5568;
+}
+
+@media (max-width: 1024px) {
+  .hero-terminal {
+    display: none;
+  }
+
+  .hero-orb {
+    right: -10%;
+    top: 10%;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 100px;
+  }
+}
