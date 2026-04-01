@@ -152,18 +152,18 @@ export const projects = [
   },
   {
     title: 'Social Media Dashboard',
-    period: 'Feb 2024 — Apr 2024',
+    period: 'Feb 2024 — Present',
     description:
-      'Modern social media dashboard with dark mode toggle and responsive design, deployed on AWS EC2 with load balancers. Achieved a 20% increase in user engagement.',
+      'Full-stack social media analytics dashboard with real-time data rendering, interactive Chart.js trend graphs, glassmorphism UI, PWA support, and production CI/CD pipelines deploying to both GitHub Pages and AWS (EC2 + ALB via CloudFormation & Terraform).',
     features: [
-      'Dark mode toggle with smooth transitions',
-      'Responsive CSS grid layouts',
-      'AWS EC2 deployment with load balancers',
-      '20% increase in user engagement',
+      '6-platform analytics with live auto-refresh every 30s',
+      'Dark/light glassmorphism toggle persisted in localStorage',
+      'Dockerized Nginx deployment with security headers & health checks',
+      'AWS infra as code — CloudFormation + Terraform (VPC, EC2, ALB, ASG)',
     ],
-    tech: ['React.js', 'CSS Grid', 'AWS EC2', 'Load Balancer'],
-    github: null,
-    live: null,
+    tech: ['JavaScript', 'Chart.js', 'Docker', 'GitHub Actions', 'AWS', 'Terraform', 'Nginx'],
+    github: 'https://github.com/Yashchaudhary05/Social_Media_Dashboard',
+    live: 'https://yashchaudhary05.github.io/Social_Media_Dashboard/',
     confidential: false,
   },
 ]
